@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" href="regi-style.css">
+
+	<style>
+
+		.title{
+		margin: 100px;
+		border-left: solid 10px black;
+		padding-left: 15px;
+		}
+
+		.content{
+			margin-left: 100px;
+		}
+
+    .content input{
+    	width: 250px;
+    	margin-bottom: 50px;
+    	background-color: transparent;
+    	border: none;
+    	border-bottom: 1px solid #999;
+    	font-size: 18px;
+    	outline: none;
+    }
+
+    .btn-area {margin-top: 30px;}
+    .btn-area button {
+    	width: 250px; height: 50px;
+    	background: #000;
+      margin-left: 100px;
+      margin-bottom: 30px;
+    	color: #fff;
+    	font-size: 20px;
+    	border: none;
+    	border-radius: 25px;
+    	cursor: pointer;
+    }
+
+
+    .home-btn button {
+      width: 250px; height: 50px;
+    	background: #fff;
+      margin-left: 100px;
+      margin-bottom: 30px;
+    	color: #000;
+    	font-size: 20px;
+    	border: solid 1px;
+    	border-radius: 25px;
+    	cursor: pointer;
+    }
+
+	</style>
+
+
+	</head>
+
+
+	<body>
+
+    <section>
+			<div class="title">
+				<h2>회원가입</h2>
+			</div>
+
+			<div class="content">
+				<h3>아이디</h3>
+				<input type="text" name="userId" id="id">
+
+				<h3>비밀번호</h3>
+				<input type="password" name="userPW" id="pw" onchange="check_pw()">
+
+				<h3>비밀번호확인</h3>
+				<input type="password" name="userPW2" id="pw2" onchange="check_pw()">
+        &nbsp;&nbsp;<span id="check"> </span>
+      </div>
+
+      <div class="btn-area">
+				<button id="btn" type="submit"
+        onMouseOver="this.style.backgroundColor='red';" onMouseOver="this.style.color='black';"
+        onMouseOut="this.style.backgroundColor='';" onMouseOut="this.style.color='';">
+          가입!
+				</button>
+      </div>
+
+      <div class="home-btn">
+        <a href="login.html">
+        <button id="btn" type="submit">
+        돌아가기
+        </button>
+
+			</div>
+
+
+    </section>
+
+  </body>
+
+
+
+
+  <script type="text/javascript">
+
+      function check_pw(){
+        if(document.getElementById('pw').value !='' && document.getElementById('pw2').value!=''){
+            if(document.getElementById('pw').value == document.getElementById('pw2').value){
+                document.getElementById('check').innerHTML='비밀번호가 일치합니다.';
+                document.getElementById('check').style.color='green';
+            }
+            else{
+                document.getElementById('check').innerHTML='비밀번호가 일치하지 않습니다.';
+                document.getElementById('check').style.color='red';
+            }
+          }
+      }
+
+
+    </script>
+
+
+
+</html>
