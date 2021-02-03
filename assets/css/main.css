@@ -1,6 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
-
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 /* html 자체에서 제공하는 설정값들을 초기화하는 과정 */
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -190,8 +190,10 @@ input, select, textarea {
 		color: inherit;
 		text-decoration: none;
 	}
-
-	h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
+	
+	
+	/* 공통서식인데 h2, h3는 너무 지저분해보여서 내가 지움!!*/
+	h1.major, h4.major, h5.major, h6.major {
 		border-bottom: solid 1px #ffffff;
 		width: -moz-max-content;
 		width: -webkit-max-content;
@@ -202,19 +204,22 @@ input, select, textarea {
 	}
 
 	h1 {
-		font-size: 2.25rem;
+		font-size: 3rem;
 		line-height: 1.3;
 		letter-spacing: 0.5rem;
 	}
 
 	h2 {
-		font-size: 1.5rem;
+		font-size: 2rem;
 		line-height: 1.4;
 		letter-spacing: 0.5rem;
+		color : #757B52;
+		border-bottom: solid 5px #949B68;
 	}
 
 	h3 {
-		font-size: 1rem;
+		font-size: 1.5rem;
+		text-shadow: 1px 1px 1px #333333;
 	}
 
 	h4 {
@@ -227,6 +232,29 @@ input, select, textarea {
 
 	h6 {
 		font-size: 0.6rem;
+	}
+
+
+	/* 내가 추가한 설정들*/ 
+
+	.focuslip{
+		font-size: 3rem;
+		line-height: 1.3;
+		letter-spacing: 0.5rem;
+		font-family: "Nanum Myeonjo", serif;
+		font-weight: bold;
+	}
+
+	.inner_text{
+		font-size: 1.25rem;
+		letter-spacing: 0.25rem;
+	}
+
+	.quote{
+		font-size: 30px;
+		font-family: "Nanum Myeonjo", serif;
+		font-weight: 700;
+		letter-spacing: 0.25rem;
 	}
 
 	@media screen and (max-width: 736px) {
@@ -1143,9 +1171,12 @@ input, select, textarea {
 		-ms-transition-delay: 0.75s;
 		transition-delay: 0.75s;
 		background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-		background-size: auto, 256px 256px;
-		background-position: center, center;
-		background-repeat: no-repeat, repeat;
+		background-size: auto,
+ 256px 256px;
+		background-position: center,
+ center;
+		background-repeat: no-repeat,
+ repeat;
 		z-index: 2;
 	}
 
@@ -1161,10 +1192,10 @@ input, select, textarea {
 		transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
 		background-image: url("../../images/focuslip-bg.jpg"); /* 배경사진경로 */
 		background-position: center;
-		background-size: cover;
+		background-size: auto;
 		background-repeat: no-repeat;
 		z-index: 1; /* 이건 개체를 앞/뒤로 보내는 수 인 듯 */
-		filter: blur(4px); /* 블러처리 추가했다! */
+		filter: blur(2px); /* 블러처리 추가했다! */
 	}
 
 	body.is-article-visible #bg:after {
@@ -1336,7 +1367,7 @@ input, select, textarea {
 		margin-bottom: 0;
 		list-style: none;
 		padding-left: 0;
-		border: solid 1px #ffffff;
+		border: solid 2px #ffffff;
 		border-radius: 4px;
 	}
 
@@ -1528,7 +1559,7 @@ input, select, textarea {
 		max-width: 100%;
 		z-index: 3;
 	}
-
+	/* 메뉴 클릭하면 나오는 작은 창 */
 	#main article {
 		-moz-transform: translateY(0.25rem);
 		-webkit-transform: translateY(0.25rem);
@@ -1542,7 +1573,7 @@ input, select, textarea {
 		position: relative;
 		width: 40rem;
 		max-width: 100%;
-		background-color: rgba(27, 31, 34, 0.85);
+		background-color: rgba(181, 185, 148, 0.85);
 		border-radius: 4px;
 		opacity: 0;
 	}
